@@ -1,0 +1,10 @@
+console.log(req.body)
+    Axios.post(APIURL,data){}
+    req.body adalah parameter kedua dari Axios.post yaitu data
+    req.body => ambil data dari frot end(parameter kedya Axios.post)
+    req.params => data dari url endpoit /patch/id
+    req.querry => search => url
+    req.body
+
+    Router => menyimpan semua alamat/url => Url & method
+    Controller => function yang di excute ketika url di akses
