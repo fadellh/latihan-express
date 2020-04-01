@@ -42,11 +42,10 @@ module.exports = {
         console.log(req.body)
        let username = req.body.username
         let password = req.body.password
-        let dataUsername = data.filter((val)=> val.username.includes(username))
-        let datapass = data.filter((val)=> val.password.includes(password))
+        let dataUser = data.find((val)=> val.username === (username)&& val.password==password)
 
-        if(dataUsername.length>0 && datapass.length>0){
-            res.status(200).send(dataUsername)
+        if(dataUser){
+            res.status(200).send(dataUser)
         }else{
             res.status(404).send('<h1>Not Found</h1>')
         }
